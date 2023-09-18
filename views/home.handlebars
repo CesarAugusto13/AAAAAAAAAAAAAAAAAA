@@ -1,0 +1,9 @@
+<main>
+    <h2>Dashboard</h2>
+
+    {{#each itens}}
+        <p>Produto: {{this.nome}}</p>
+        <p>Preço: {{this.preco}}</p>
+        <p>Pagina do produto: <a href={{this.pagina}}>Produto</a> </p>
+    {{/each}}
+</main>
