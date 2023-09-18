@@ -1,1 +1,0 @@
-Estou usando um Core Module para ler este arquivo.
