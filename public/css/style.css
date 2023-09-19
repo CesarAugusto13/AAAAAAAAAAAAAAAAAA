@@ -6,6 +6,23 @@
     background-color: mediumaquamarine;
 }
 
+header{
+    border-bottom: 1px solid rgb(48, 21, 99);
+    text-align: center;
+    padding-block: 1;
+}
+
+main{
+    height: calc(100vh - 107px);
+    
+}
+
+footer{
+    border-top: 1px solid #aaa;
+    text-align: center;
+    padding-top: .5rem;
+}
+
 #geladeira {
     display: flex;
     flex-direction: center;

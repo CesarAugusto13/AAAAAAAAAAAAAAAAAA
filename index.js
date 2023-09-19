@@ -1,7 +1,6 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const products = require('./products')
-
 const app = express()
 
 // configurar posta public para arquivos estáticos
@@ -12,51 +11,20 @@ app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
-    const itens = [{
-        
-        nome:"Geladeira",
-        preco: 10,
-        pagina: "/geladeira"
-        
-    },
-    { nome: "Microfone",
-      preco: 20,
-      pagina: "/microfone"
-    },
-    {
-        nome: "Computador",
-        preco: 30,
-        pagina: "/computador"
-    }
-    ]
-
-    res.render('home', { itens })
+    res.render('home', { products })
 })
 
-app.get('/computador', (req,res) =>{
-    res.render('computador')
-}) 
+app.get('/products/:id', (req,res) => {
+    const id = req.params.id
 
-app.get('/geladeira', (req,res) =>{
-    res.render('geladeira')
-}) 
+    const products = products.find(products => {
+        if (products.id == id) {
+            return products
+        } 
+    })
 
-app.get('/microfone', (req,res) =>{
-    res.render('microfone')
-}) 
-
-app.get('/post', (req,res) => {
-    const post = {
-        title: "Aprender Node.js",
-        category: "Javascript",
-        body: "Este artigo vai te ajudar a aprender Node.js",
-        comments: 4
-    }
-
-    res.render('blogpost', { post })
+    res.render('products', {products})
 })
-
-
 
 app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000")

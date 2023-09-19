@@ -1,9 +1,14 @@
 <main>
-    <h2>Dashboard</h2>
-
-    {{#each itens}}
-        <p>Produto: {{this.nome}}</p>
-        <p>Preço: {{this.preco}}</p>
-        <p>Pagina do produto: <a href={{this.pagina}}>Produto</a> </p>
+    <h2> Home </h2>
+    {{#each products}}
+    <div>
+        <section class="products">
+            <p>Produto: {{this.name}}</p>
+            <p><strong>Preço: {{this.preco}}</strong></p>
+            <p> <img src=" {{this.img}}" alt="{{this.name}}"></p>
+            <p>Pagina do produto: <a href={{this.pagina}}>Produto</a></p>
+            <a href="{{this.pagina}}"></a>
+        </section>
+    </div>
     {{/each}}
 </main>
