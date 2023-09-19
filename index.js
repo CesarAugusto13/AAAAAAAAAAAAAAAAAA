@@ -37,6 +37,13 @@ app.get('/computador', (req,res) =>{
     res.render('computador')
 }) 
 
+app.get('/geladeira', (req,res) =>{
+    res.render('geladeira')
+}) 
+
+app.get('/microfone', (req,res) =>{
+    res.render('microfone')
+}) 
 
 app.get('/post', (req,res) => {
     const post = {
