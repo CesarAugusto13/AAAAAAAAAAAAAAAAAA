@@ -5,3 +5,24 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: mediumaquamarine;
 }
+
+#geladeira {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+}
+
+
+#microfone {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+}
+
+
+
+#computador {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+}
